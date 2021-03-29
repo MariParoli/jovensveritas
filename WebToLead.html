@@ -1,0 +1,226 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTA: Adicione o seguinte elemento <META> à sua página <HEAD>.  Se      -->
+<!--  necessário, modifique o parâmetro charset para especificar o conjunto   -->
+<!--  de caracteres de sua página HTML.                                       -->
+<!--  ----------------------------------------------------------------------  -->
+<html>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #820C0C;
+            --secondary: #99703B;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+        }
+        .principal {
+            display: flex;
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+            border-radius: 2rem;
+
+        }
+        
+        .logo {
+            padding: 2.5rem;
+            position: relative;
+            max-width: 30rem;
+        }
+
+        .logo::after {
+            content: "";
+            position: absolute;
+            background: linear-gradient(to right, transparent, rgba(0,0,0,.35));
+            height: 100%;
+            width: 5rem;
+            top: 0;
+            right: 0;
+        }
+
+
+        .logo img {
+            width: 20rem;
+        }
+
+
+        form{
+            max-width: 25rem;
+            position: relative;
+            background-color: var(--primary);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            color: #fff;
+            border-radius: 0 2rem 2rem 0;
+        }
+
+        form::after {
+            content: "";
+            position: absolute;
+            background: linear-gradient(to left, transparent, rgba(0,0,0,.35));
+            height: 100%;
+            width: 3.5rem;
+            top: 0;
+            left: 0;
+        }
+
+        .principal > form,
+        .submit,
+        .form_input, 
+        .form_input input, 
+        .form_input select {
+            width: 100%;
+        }
+
+        .form_input {
+            margin-bottom: 1rem;
+
+        }
+
+        .form_name {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form_name > .form_input:first-child {
+            margin-right: 1rem;
+        }
+
+        .form_input label {
+            display: block;
+            font-size: 0.8rem;
+            margin-bottom: 0.2rem;
+
+        }
+
+        .form_input input, select, .submit {
+           outline-color: var(--secondary);
+           border: none;
+           border-radius: 0.2rem;
+        }
+
+        .form_input input, select {
+            height: 1.3rem;
+        }
+
+        .submit {
+            background-color: var(--secondary);
+            font-weight: bold;
+            color: #fff;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .submit:hover {
+            background-color: #99703Baf;
+        }
+
+        .conteudo {
+            position: relative;
+            top: -3rem;
+        }
+
+        .titulo {
+            color: var(--primary);
+        }
+
+        .texto {
+            margin-top: 1rem;
+        }
+
+    </style>
+</head>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTA: Adicione o elemento <FORM> a seguir à sua página.                 -->
+<!--  ----------------------------------------------------------------------  -->
+<body>
+    
+<main class="principal">
+
+<section class="logo">
+    <img src="./logo.svg" alt="Jovens Veritas">
+    <div class="conteudo">
+        <h1 class="titulo">SUA PARCERIA É IMPORTANTE PARA NÓS!</h1>
+        <p class="texto">Preencha o formulário e nossa equipe entrará em contato.</p>
+    </div>
+</section>
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+<input type=hidden name="oid" value="00D5Y000001eFng">
+<input type=hidden name="retURL" value="https://jovensveritas.com/">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTA: Estes campos são elementos de depuração opcionais. Remova o       -->
+<!--  comentário dessas linhas se quiser testar no modo de depuração.         -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="marianaparolimc@gmail.com">                                      -->
+<!--  ----------------------------------------------------------------------  -->
+<div class="form_name">
+    <div class="form_input">
+        <label for="first_name">Primeiro Nome</label><input  id="first_name" maxlength="40" name="first_name" type="text" />
+    </div>
+    <div class="form_input">
+        <label for="last_name">Sobrenome</label><input  id="last_name" maxlength="80" name="last_name" type="text" />
+    </div>
+</div>
+<div class="form_name">
+<div class="form_input">
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" type="text" />
+</div>
+
+<div class="form_input">
+    <label for="phone">Telefone</label><input  id="phone" maxlength="40" name="phone" type="text" />
+</div>
+</div>
+<div class="form_input">
+    <label>Cargo</label><input id="00N5Y00000FD2DA" maxlength="50" name="00N5Y00000FD2DA" type="text" />
+</div>
+<div class="form_name">
+<div class="form_input">
+    <label for="company">Instituição</label><input  id="company" maxlength="40" name="company" type="text" />
+</div>
+<div class="form_input">
+<label>CNPJ</label><input  id="00N5Y00000FD1Rl" maxlength="14" name="00N5Y00000FD1Rl" type="text" />
+</div>
+</div>
+<div class="form_input">
+    <label for="lead_source">Como chegou até aqui?</label><select  id="lead_source" name="lead_source">
+    <option value="">-- Selecione --</option><option value="Web">Web</option>
+    <option value="Phone Inquiry">Telefone</option>
+    <option value="Partner Referral">Redes sociais</option>
+    <option value="Purchased List">Palestra</option>
+    <option value="Other">Outro</option>
+    </select>
+    
+</div>
+
+<input class="submit" type="submit" name="submit">
+
+</form>
+</main>
+</body>
+</html>
